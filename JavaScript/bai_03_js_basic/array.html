@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+        //forEach: duyet
+      let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let tong =0;
+      numbers.forEach(function(item, index, array){
+        tong += item;
+        array[index] = 10;
+      });
+      console.log(tong);
+      console.log(numbers);
+    </script> -->
+
+    <script>
+      //every(): ktra các phần tử thỏa mãn đk nào đó
+      const monHoc = [
+        {
+          ten: "toán",
+          diem: 8.8,
+        },
+        {
+          ten: "toán",
+          diem: 5,
+        },
+        {
+          ten: "toán",
+          diem: 1,
+        },
+        {
+          ten: "lý",
+          diem: 8.2,
+        },
+        {
+          ten: "hóa",
+          diem: 8.7,
+        },
+        {
+          ten: "tin",
+          diem: 4.2,
+        },
+      ];
+      //duyệt qua từng object monhoc, và trả về true false theo đk
+      const hocsinhgioi = monHoc.every(function (item) {
+        //nếu all đều trên > 8 sẽ true
+        return item.diem > 8;
+      });
+      console.log(hocsinhgioi);
+
+      //every(): xét all
+      //some(): giống every nhưng chỉ xét 1
+      const oLaiLop = monHoc.some(function (item) {
+        //nếu 1 môn < 5 sẽ true
+        return item.diem < 5;
+      });
+      console.log(oLaiLop);
+
+      //find(): trả về 1 phần tử tìm thấy đầu tiên
+      const timMonTin = monHoc.find(function (item) {
+        return item.ten == "tin";
+      });
+      console.log(timMonTin);
+
+      //filter: giống find(), nhưng trả về tất cả phần tử đc tìm thấy.
+      const listMonToan = monHoc.filter(function (item, index, array) {
+        return item.ten == "toán";
+      });
+
+      if (listMonToan.length != 0) {
+        listMonToan.forEach(function (item, index, array) {
+          console.log("điểm môn tin của bạn là: ", item.diem);
+        });
+      } else {
+        console.log("không tìm thấy môn toán");
+      }
+    </script>
+
+    <script>
+      console.log("------------------------------------------------");
+      // let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // let ketQua = numbers.map((item, index, array) => {
+      //   return undefined;
+      // });
+      // console.log(ketQua);
+
+      const monHoc_2 = [
+        {
+          ten: "toán",
+          diem: 8,
+        },
+        {
+          ten: "lý",
+          diem: 8,
+        },
+        {
+          ten: "hóa",
+          diem: 8,
+        },
+        {
+          ten: "tin",
+          diem: 4,
+        },
+      ];
+
+      let danhSachHocLuc = monHoc_2.map((item) => {
+        let hocLuc = "";
+        if (item.diem >= 8) {
+          hocLuc = "học lực giỏi";
+        } else if (item.diem > 6.5 && item.diem < 8) {
+          hocLuc = "học lực khá";
+        } else {
+          hocLuc = "học lực kém";
+        }
+        return {
+          ten: item.ten,
+          hocLuc: hocLuc,
+        };
+      });
+      console.log(monHoc_2);
+      console.log(danhSachHocLuc);
+
+      // let tong = (monHoc_2) => {
+      //   let sum = 0;
+      //   for (let x of monHoc_2) {
+      //     sum += x.diem;
+      //   }
+      //   return sum;
+      // };
+
+      // console.log("tổng điểm là: ", tong(monHoc_2));
+
+      let trungBinh = monHoc_2.reduce((total, item) => {
+        return total + item.diem/monHoc_2.length;
+      }, 0);
+
+      console.log(trungBinh);
+
+    </script>
+  </body>
+</html>

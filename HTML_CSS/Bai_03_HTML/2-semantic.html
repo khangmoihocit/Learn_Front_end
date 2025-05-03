@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- semanric(ngữ nghĩa): là những thẻ có nội dung bên trong có ý nghĩa tương ứng với tên thẻ đó
+    -<article>: xác định nội dung độc lập khép kín
+    -<aside>: xác định nd ngoài nd trang
+    -<header>: chỉ định tiêu đề cho 1 tài liệu hoặc section
+    -<footer>: xd chân trang 1 tài liệu hoặc section
+    -<main>: chỉ  định nd chính của tài liệu
+    -<nav>: xd liên kết điều hướng
+    -<section>: xác định 1 phần trong tài liệu -->
+<body>
+    <h2>không có semantic</h2>
+    <div class="header">header</div>
+    <div class="sidebar">sidebar</div>
+    <div class="content">
+        <div class="post">post</div>
+        <div class="post">post</div>
+        <div class="post">post</div>
+    </div>
+    <div class="footer">footer</div>
+
+    <h2>Có semantic</h2>
+    <header class="header">header</header>
+    <nav class="sidebar">sidebar</nav>
+    <main class="content">
+        <article class="post">post</article>
+        <article class="post">post</article>
+        <article class="post">post</article>
+    </main>
+    <footer class="footer">footer</footer>
+</body>
+</html>

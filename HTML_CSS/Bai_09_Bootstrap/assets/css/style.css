@@ -1,0 +1,21 @@
+.section-one{
+    background-color: antiquewhite;
+    padding: 30px 0;
+}
+
+.section-one .inner-box{
+    margin: 20px 0;
+}
+
+.section-one .inner-box i{
+    color: green;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.section-one .inner-box .inner-title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+

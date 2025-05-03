@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+    1.thẻ a: chèn link
+    2.thẻ img: chèn ảnh
+    3.file paths: đường dẫn
+    4.thẻ video: chèn video
+    5.thẻ audio: chèn audio
+    6.thẻ table: chèn bảng
+    7.thẻ <ul> <ol>: chèn danh sách
+-->
+<body>
+    <!--1.thẻ a: địa chỉ link tới trang web khác
+        href: thuộc tính xác định địa chỉ liên kết /chỉ áp dụng cho thẻ a
+        target: thuộc tính xác định nơi mà tài liệu được mở
+            _self: Mặc định. Mở ở tab hiện tại
+            _blank: mở tài liệu ở tab mới-->
+    <p>Xem tài liệu: <a href="https://sinhvien.hou.edu.vn/KetQuaHocTap.aspx" 
+        target="_blank" title="đây là link sang trang sinh viên hou">tại đây</a>
+    </p>
+
+    <!--2.thẻ img: thêm ảnh
+        src: chèn đường dẫn ảnh
+        alt: văn bản thay thế cho hình ảnh, hiển thị khi đường dẫn ảnh bị lỗi-->
+
+    <!--3.đường dẫn tuyệt đối-->
+    <!-- <img src="https://d1hjkbq40fs2x4.cloudfront.net/2016-01-31/files/1045.jpg" alt="ảnh bị lỗi"> -->
+    
+    <!--đường dẫn tương đối-->
+    <!-- đường dẫn thư mục phải cùng cấp -->
+    <!-- <img src="images/image.jpg" alt="ảnh test"> -->
+    <!-- <img src="/Bai_02/images/image.jpg" alt=""> -->
+    <!-- ../: để quay lại thư mục -->
+        
+    <!-- 4. thẻ video
+            -width/height: chiều cao rộng của video
+            -controls: thuộc tính điều khiển như là bật, tắt, đóng
+            -loop: lặp lại video
+            -src: đường dẫn video
+            thuộc tính:
+                -type: kiểu video(mp4, ogg, webm)
+                -autoplay: tự động phát video
+                -muted: tắt tiếng
+    -->
+    <video width="420" height="420" controls loop autoplay muted>
+        <source src="videos/music.mp4" type="video/mp4">
+    </video>
+    <!-- 5. thẻ audio: autoplay, controls, loop, src, type, muted.
+        
+    -->
+    <audio controls loop muted>
+        <source src="audio/y2mate.com - Em Của Ngày Hôm Qua (1).mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>

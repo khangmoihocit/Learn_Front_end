@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- attributes: action: xác định khi biểu mẫu đc gửi, giá trị là 1 đg dẫn
+                     target: chỉ định nơi hiện thị phản hồi đc nhận sau khi gửi form
+                     autocomplete: tự động điền
+                     method post: gửi nhiều dữ liệu k bị mất, k hiện dữ liệu lên thanh http
+                     novalidate: không cần ktra tính chính xác của dữ liệu đc nhập-->
+    <form action="http://www.w3schools.com/action_page.php" target="_blank" method="GET" autocomplete="on" novalidate>
+        <label for="fullName">họ tên</label>
+        <input id="fullName" name="ho_ten">
+        <label for="fullName">màu sắc</label>
+
+        <select name="color" size="3" multiple> <!--multiple: cho phép chọn nhiều giá trị-->
+            <option value="red">màu đỏ</option>
+            <option value="yellow">màu vàng</option>
+            <option value="black">màu đen</option>
+        </select>
+
+        <input type="submit" value="gửi"> <!--nút phải ở trong form-->
+
+        <!-- rows: chiều dài, cols: chiều rộng -->
+        <textarea name="note" rows="5" cols="10"></textarea>
+
+        <button>gửi</button> <!--nút k cần ở trong form-->
+        <br>
+        <input name="ngayDi" type="date">
+        <br><br><br><br><br>
+        <input type="time" name="thoiGian">
+        <br><br><br><br><br>
+        <input type="file" name="uploadFile">
+        <br><br><br><br><br>
+
+        <h2>test chechBox</h2>
+        <input type="checkbox" name="chechBox" id="ngonNguC" value="c">
+        <label for="ngonNguC">Ngôn ngữ c</label><br>
+
+        <input type="checkbox" name="chechBox" id="ngonNguJava" value="java">
+        <label for="ngonNguJava">Ngôn ngữ java</label><br>
+
+        <input type="checkbox" name="chechBox" id="ngonNguPhp" value="php">
+        <label for="ngonNguPhp">Ngôn ngữ php</label><br>
+
+        <h2>test radio</h2>
+        <input type="radio">
+        <input type="radio">
+        <input type="radio">
+    </form>
+</body>
+</html>

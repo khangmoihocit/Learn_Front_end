@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .inline, .block, .inline-block{
+            background: orange;
+            border: 1px solid #0a0303;
+            /* mặc định sẽ là inline */
+            display: inline; 
+        }
+
+        .inline{
+            /* không đặt đc width height */
+            display: inline;
+        
+        }
+
+        .block{
+            /* kéo dài từ trái sang phải(chiếm 1 hàng) và luôn bắt đầu bắt 1 dòng mới */
+            display: block;
+        }
+
+        .inline-block{
+            /* không bắt đầu bằng hàng mới, đặt đc width height, width mặc định là width element */
+            display: inline-block;
+            height: 50px;
+            padding-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>1. Display: inline</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <span  class="inline">Thẻ inline 1</span> <span class="inline">thẻ inline 2</span>Tempore pariatur ea delectus ex neque, 
+        commodi recusandae saepe quae adipisci, hic perferendis sit, earum officiis ipsa cum veritatis assumenda ipsum quidem?</p>
+
+    <h2>2. Display: block</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <span class="block">thẻ block</span> <span class="block">thẻ block</span>Quis totam a quos, iste nesciunt,
+        perferendis adipisci atque ipsum non dolor consectetur. Assumenda non ipsam nisi sequi temporibus adipisci asperiores ratione!</p>
+
+    <h2>2. Display: inline-block</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <span class="inline-block">thẻ inline-block1</span>  <span class="inline-block">thẻ inline-block1</span>  Quis totam a quos, iste nesciunt,
+        perferendis adipisci atque ipsum non dolor consectetur. Assumenda non ipsam nisi sequi temporibus adipisci asperiores ratione!</p>
+</body>
+</html>

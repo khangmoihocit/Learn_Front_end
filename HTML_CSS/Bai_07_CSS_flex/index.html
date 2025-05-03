@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .container{
+            background-color: rgb(175, 100, 245);
+            padding: 20px;
+            border-radius: 5px;
+            height: 500px;
+        }
+
+        .item{
+            background-color: orange;
+            border: 3px solid #f4ebeb;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+            width: 150px;
+        }
+        
+
+        /* flex-direction: đảo chiều các item */
+        /* flex-wrap: các item nằm trên 1 dòng hoặc tự động xuống dòng
+            nowrap: khi tổng chiều rộng của các item lớn hơn chiều rộng của container thì sẽ tự xuống dòng
+            wrap-reverse: sẽ nhảy lên trên*/
+        /* justify-content: sắp xếp các  item theo main*/
+        /* align-items: sắp xếp các item theo cross , áp dụng cho 1 dòng*/
+        /* align-content: giống align-items, nhưng áp dụng cho hiều dòng */
+        /* align-self: xét cho 1 item, các giá trị giống align-item */
+        /* order: sắp xếp vị trí các item */
+        .container{
+            /* inline-flex: giúp container có width bằng với các item(không tính padding) */
+            display: flex;
+            /* column-reverse: các item bị đảo ngược lại */
+            /* flex-direction: row-reverse; */
+
+            /* các item lấy lề phải */
+            /* justify-content: space-between; */
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        /* .item:nth-child(1){
+            order: 3;
+        }
+        .item:nth-child(2){
+            order: 1;
+
+        }
+        .item:nth-child(3){
+            order: 2;
+        } */
+
+
+
+    </style>
+
+    <div class="container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <!-- <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+        <div class="item">item 7</div>
+        <div class="item">item 8</div> -->
+    </div>
+</body>
+</html>

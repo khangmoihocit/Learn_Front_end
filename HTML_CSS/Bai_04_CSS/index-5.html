@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* width, height */
+    .test{
+        background: #b36d9f;
+        color: aliceblue;
+        padding: 50px;
+    }
+
+    .box{
+        background: #b36d9f;
+        color: aliceblue;
+        /* chiều cao của cả box */
+        box-sizing: border-box;
+        padding: 50px;
+        border: 10px solid #000;
+        /* height của cả element */
+        height: 200px;
+        /* width: 300px */
+        /* vw: width sẽ chiếm 50% */
+        width: 50vw;
+        /* width tối thiểu luôn là 200px cho dù kéo dãn, tương tự với max-width */
+        min-width: 200px;
+        /* căn lề trái, phải: right, center, căn đều 2 bên: justify */
+        text-align: left;
+
+    }
+
+</style>
+<body>
+    <!-- <div class="test">nội dung 01</div> -->
+    <div class="box"> nội dung test nội dung test nội dung test nội dung test nội dung test </div>
+</body>
+</html>

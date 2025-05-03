@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.header{
+    background-color: #8AD2C3;
+    padding: 30px;
+    text-align: center;
+}
+
+.section-two{
+    margin-top: 10px;
+}
+
+.content{
+    background-color: #C7EBF3;
+    padding: 20px;
+    text-align: center;
+    height: 600px;
+    width: 70%;
+    float: left;
+}
+
+.aside{
+    background-color: #F5D9C8;
+    padding: 20px;
+    text-align: center;
+    height: 600px;
+    width: 30%;
+    float: right;
+}
+
+.clear-fix{
+    clear: both;
+}
+
+.box{
+    background-color: #E2DCBA;
+    padding: 20px;
+    height: 150px;
+    width: calc(25% - 7.5px);
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+.box:nth-child(4){
+    margin-right: 0;
+}
+
+.footer{
+    background-color: #C1AAC4;
+    padding: 30px;
+}
+
+
+/* xét css khi màn hình là 768px */
+@media screen and (max-width: 768px) {
+    .content{
+        width: 100%;
+    }
+    .aside{
+        width: 100%;
+    }
+
+    .box{
+        width: calc(50% - 5px);
+    }
+
+    .box:nth-child(2){
+        margin-right:0;
+    }
+}

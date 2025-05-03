@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let result = tinhTong(1, 2, 3, 4, 5, 6);
+      function tinhTong() {
+        let res = 0;
+        for (let tmp of arguments) {
+          res += tmp;
+        }
+        return res;
+      }
+      console.log(result);
+
+      //khai bao ham khong co hoisting
+      //ham mui ten(arrow function): se khong co arguments
+      var tenHam = (thamSo1, thamSo2) => {
+        //code
+      };
+
+      //...args: giống như 1 mảng
+      var tinhTong2 = (...args) => {
+        console.log(args);
+        let tong = 0;
+        for (let item of args) {
+          tong += item;
+        }
+        return tong;
+      };
+
+      let ketQua = tinhTong2(1, 2, 3, 4, 5);
+      console.log(ketQua);
+
+      //Bai1: tinh tong cac so chan trong mang sau
+      let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      var tongChan = (a) => {
+        let tong = 0;
+        for (let tmp of a) {
+          if (tmp % 2 == 0) {
+            tong += tmp;
+          }
+        }
+        return tong;
+      };
+      console.log(tongChan(a));
+
+      var tinhTong = (a) =>{
+        let sum = 0;
+        a.foreach(item =>{
+          sum += item;
+        });
+        return sum;
+      }
+
+      //Bai2: nhap n, tinh bieu thuc: 1/n + 2/n + ... n/n
+      let n;
+      var tinhBieuThuc = (n) => {
+        let sum = 0;
+        for (let i = 1; i < n; ++i) {
+          sum += i/n;
+        }
+        return sum;
+      };
+
+      do {
+        n = prompt("nhap n");
+        n = parseInt(n);
+        if(n<=0){
+          console.log('vui lòng nhập số lớn hơn 0.');
+        }
+        else{
+          let res = tinhBieuThuc(n);
+          console.log('kết quả của biểu thức là: '+ res);
+        }
+      } while (n <= 0);
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,159 @@
+html{
+    background-color: rgb(189, 188, 185);
+}
+
+/* navbar*/
+.nav{
+    min-height: 42px;
+    background-color: rgb(255, 144, 34);
+    display: flex;
+    /* giúp cho các flex-item các xa ở 2 bên */
+    justify-content: space-between;
+}
+
+.nav-list{
+    margin: auto 23px;
+    padding-left: 0;
+    display: flex;
+}
+
+.nav-item{
+    color: rgb(236, 241, 246);
+    margin: 0 8px;
+    list-style: none;
+    display: inline-block;
+}
+
+/* form layout */
+.form-container{
+    background-color: rgb(190, 196, 200);
+    max-width: 720px;
+    margin: 36px auto 0 auto;
+}
+
+.form{
+    padding: 22px;
+}
+
+.form-row{
+    padding: 8px 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.form-input{
+    flex: 1;
+}
+
+.form-label{
+    /* độ dài tối thiểu cho flex-item này là 90, giúp các label thẳng hàng hơn */
+    min-width: 90px; 
+}
+
+/* column-layout */
+.column-layout{
+    background-color: rgb(232, 235, 239);
+    background-clip: border-box;
+    margin-top: 100px;
+    padding: 12px 0;
+    display: flex;
+}
+
+.column-item{
+    margin-right: 30px;
+    /* giúp 3 flex-item có tỉ lệ giống nhau đều là 1 */
+}
+
+.sidebar-one{
+    flex: 1;
+
+}
+.sidebar-two{
+    flex: 1;
+
+}
+.main-column{
+    /* giúp flex-item main column này có tỉ lệ là 2:1 */
+    flex:3;
+}
+
+/* feature */
+.feature-layout{
+    margin-top: 36px;
+    display: flex;
+    flex-wrap: wrap;
+
+    /* tạo khoảng cách giữa các flex-item */
+    justify-content: space-around;
+}
+.feature-item{
+    margin-top: 23px;;
+    padding: 12px 16px;
+    flex-basis: 27%;
+}
+.feature-item:nth-child(1){
+    background-color: rgb(236, 213, 186);
+}
+.feature-item:nth-child(2){
+    background-color: rgb(142, 179, 202);
+}
+.feature-item:nth-child(3){
+    background-color: rgb(227, 163, 222);
+}
+
+.box{
+    background-color: aliceblue;
+    margin-top: 36px;
+    padding: 12px 0 32px 0;
+    display: flex;
+    justify-content: space-around;
+    /* giusp các item xuống dòng khi bị chèn */
+    /* wrap- reverse */
+    flex-wrap: wrap;
+
+}
+.box-item{
+    width: 148px;
+    height: 90px;
+    background-color: red;
+    color: aliceblue;
+    text-align: center;
+    
+}
+
+.center-layout{
+    background-color: aliceblue;
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    max-width: 640px;
+    height: 360px;
+    display: flex;
+}
+
+.center-item{
+    font-size: 42px;
+    font-weight: 700;
+    margin: auto;
+}
+
+
+.chart-layout{
+    background-color: aliceblue;
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height: 320px;
+    display: flex;
+    justify-content: space-around;
+    /* giúp đảo ngược */
+    align-items: flex-end;
+}
+.chart-item{
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    background-color: red;
+    height: var(--percent);
+}
+
+

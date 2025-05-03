@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test-table</title>
+  </head>
+  <body>
+    <style>
+      table,
+      th,
+      td{
+        border: 1px solid #ddd;
+      }
+
+      th,
+      td{
+        padding: 10px;
+      }
+    </style>
+    <!-- 6.chèn bảng
+      thuộc tính:
+        -colspan: tạo ô mở rộng trên nhiều cột
+        -rowspan: tạo ô kéo dài trên nhiều bảng
+    -->
+
+    <table>
+        <!--tiêu đề-->
+        <thead> 
+            <tr> <!--hàng-->
+              <th>STT</th> <!--cột-->
+              <th>Họ tên</th>
+              <th>SDT</th>
+            </tr>
+        </thead>
+        <!--nội dung-->
+        <tbody> 
+            <tr> <!--hàng 1-->
+              <th>001</th>
+              <th>Phạm Văn Khang</th>
+              <th>093673233</th>
+            </tr>
+            <tr> <!--hàng 2-->
+              <th>002</th>
+              <th>Nguyễn Văn A</th>
+              <th>082814327</th>
+            </tr>
+            <tr> <!--hàng 3-->
+              <th>003</th>
+              <th>Nguyễn Văn B</th>
+              <th>039376683</th>
+            </tr>
+        </tbody>
+      </table>
+  </body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .box-1,
+      .box-2 {
+        background: orange;
+        border: 2px solid #000;
+        width: 150px;
+        height: 150px;
+      }
+
+      .box-2 {
+        position: relative;
+        top: 50px;
+        left: 100px;
+      }
+
+      .box-3 {
+        background: aqua;
+        border: 2px solid #454040;
+        width: 50px;
+        height: 50px;
+        /* so với lớp cha */
+        position: absolute;
+        top: 0px;
+      }
+
+      .box-4 {
+        background: aqua;
+        border: 2px solid #454040;
+        width: 50px;
+        height: 50px;
+        /* giúp box luôn cố định khi cuộn web */
+        position: fixed;
+        top: 50px;
+        left: 0px;
+      }
+      .box-5 {
+        background: rgb(202, 65, 6);
+        border: 2px solid #454040;
+        width: 50px;
+        height: 50px;
+        /* Change from 'sticky' to 'fixed' */
+        position: sticky;
+        left: 100px;
+        top: 0; /* Adjust top position as needed */
+      }
+    </style>
+
+    <div class="box-1">box 1</div>
+    <div class="box-2">
+      box 2
+      <div class="box-3">box 3</div>
+      <div class="box-4">box 4</div>
+    </div>
+
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <div class="box-5">box 5</div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+        cupiditate culpa est voluptatibus animi libero vitae quasi quidem.
+        Minima harum esse aut sit voluptas libero maiores earum. Quaerat, fugiat
+        blanditiis?
+      </p>
+    </div>
+  </body>
+</html>

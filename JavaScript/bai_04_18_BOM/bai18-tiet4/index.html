@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="openTab()"> mở tab mới</button>
+    <button onclick="closeTab()"> đóng tab mới</button>
+    <button onclick="reloadWeb()"> Reload web</button>
+    <button onclick="login()">Login</button>
+
+
+    <script>
+        //window: đối tượng của trình duyệt
+        console.log(window);
+
+        console.log(window.innerHeight);
+        console.log(window.innerWidth);
+
+        //window.open
+        let tab;
+        function openTab(){
+            tab = window.open("https://28tech.com.vn/", "-blank", "width=1200, height = 720, top = 100px");
+        }
+
+        function closeTab(){
+            tab.close();
+        }
+        
+        //settimeout: sau bao nhieu thoi gian se chay ham nay
+        //setinterval: load sau moi lan
+        // let herf = window.location.href;
+        // setTimeout(() => {
+        //     console.log(herf);
+        // }, 2000);
+
+        // let screenWidth = window.screen.width;
+        // let screenHeight = window.screen.height;
+        // setTimeout(() => {
+        //     console.log(screenWidth);
+        //     console.log(screenHeight);
+        // }, 5000);
+
+        //BOM location
+        function reloadWeb(){
+            window.location.reload();
+        }
+        //BOM history
+
+        //cookies
+        function setCookies(cname, cvalue, exdays){
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000))
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        }
+
+        function getCookies(cname){
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0; i<ca.length; ++i){
+                var c = ca[i];
+                while(c.charAt(0) == ' '){
+                    c = c.substring(1);
+                }
+                if(c.indexOf(name) == 0){
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function login(){
+            setCookies("token", "abcdefghikmnl", 2);
+            setCookies("email", "khang567.ht@gmail.com", 5);
+        }
+
+        let allCookies = document.cookie;
+        console.log(allCookies);
+        let email = getCookies("email");
+        console.log(email);
+        console.log(getCookies("token"));
+
+    </script>
+
+</body>
+</html>

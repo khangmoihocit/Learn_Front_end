@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* link chưa truy cập lần nào sẽ hiện màu này */
+        a:link{
+            color: orange;
+        }
+
+        /* link đã truy cập */
+        a:visited{
+            color: red;
+        }
+
+        /* khi trỏ chuột vào đg link sẽ chuyển sang màu green */
+        a:hover{
+            color: green;
+        }
+
+        .box{
+            background-color: yellow;
+            border: 2px solid #000;
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+        }
+        /* khi trỏ chuột vào box sẽ chuyển  sang màu blu */
+        .box:hover{
+            background-color: blue;
+        }
+
+        .box i{
+            /* mặc định icon sẽ ẩn đi */
+            display: none;
+        }
+
+        .box:hover i{
+            /* khi trỏ chuột vào icon sẽ hiện lên */
+            display: inline;
+        }
+
+        /* khi click sẽ thực hiện */
+        .box:active{
+            background-color: red;
+        }
+
+        /* css cho li đầu */
+        ul li:first-child{
+            background-color: aqua;
+        }
+
+        /* css cho li cuối */
+        ul li:last-child{
+            background-color: blueviolet;
+        }
+
+        /* css cho li bất kỳ */
+
+        ul li:nth-child(odd){
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <a href="#1234">đây là link sang web khác</a>
+    <div class="box">
+        <i>icon</i>
+        nội dung 01</div>
+
+
+    <div>
+        <ul>
+            <li>mục 1</li>
+            <li>mục 2</li>
+            <li>mục 3</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+            <li>mục 4</li>
+        </ul>
+    </div>
+</body>
+</html>

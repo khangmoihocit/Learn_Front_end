@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box::before {
+        content: "nội dung đằng trước";
+        background-color: orange;
+        padding-top: 30px;
+        margin-top: 40px;
+        display: inline-block;
+      }
+
+      /* chỉnh độ mờ của đoạn văn */
+      .text{
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">nội dung 1</div>
+    <br>
+    <div class="text">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore incidunt
+      magnam est repudiandae dicta nam temporibus tenetur, placeat, earum
+      laudantium qui fuga ipsa, esse dignissimos molestias exercitationem
+      corrupti vel numquam!
+    </div>
+  </body>
+</html>

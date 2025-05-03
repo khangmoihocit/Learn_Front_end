@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+	.bg-image{
+		background-image: url(https://suckhoedoisong.qltns.mediacdn.vn/2014/1-mat-trang-c48b9-1407723760629.jpg);
+		width: 1200px; /*kích thước của element*/
+		height: 600px;
+		border: solid #000000;
+
+		/* KÍCH THƯỚC CỦA BACKGROUND */
+		/* background-size: cover; chỉnh ảnh sao cho vừa hết width height không cần đúng tỉ lệ ảnh
+		/* background-size: contain; chỉnh ảnh vừa khung nhưng đúng tỉ lệ ảnh*/
+		/* background-size: 100px auto; chỉnh ảnh theo width height,vd: 100% width*/
+		background-size: 100% 100%;
+		
+		/* để ảnh không bị lặp lại */
+		background-repeat: no-repeat; 
+
+		/* ảnh đc đặt ở giữa bên trái */
+		background-position: bottom right; 
+
+		/* hình đc cố định khi cuộn web */
+		background-attachment: fixed;
+
+	}
+	
+	/* body{
+		background-image: linear-gradient(90deg, #000000, #ffffff);
+	} */
+
+</style>
+<body>
+	<h1 class="bg-image test"></h1>
+	
+</body>
+</html>
