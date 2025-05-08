@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button">button</button>
+
+    <script>
+        function hamMot(){console.log("viec 1");}
+
+        function hamHai(){console.log("viec 2");}
+
+        const button = document.querySelector("#button");
+
+        //envent: chi xu ly duoc 1 ham, con eventListener xu ly dc nhieu ham
+        button.addEventListener("click", hamMot);
+        button.addEventListener("click", hamHai);
+
+        //xoa su kien
+        setTimeout(() => {
+            button.removeEventListener("click", hamHai)}, 2000);
+
+    </script>
+</body>
+</html>

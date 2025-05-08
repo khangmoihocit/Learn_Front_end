@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let a = 2;
+        let b = 7;
+
+        var tong = (a, b) => a + b;
+        let c = sum(a, b);
+        console.log(c);
+        console.log(tong(c, b));
+
+        //co tinh hoisting - declaration function 
+        function sum(a, b){
+            return (a + b);
+        };
+    </script>
+
+    <button id="button">button</button>
+    <ul id="menu">
+        <li>muc 1</li>
+        <li>muc 2</li>
+        <li>muc 3</li>
+    </ul>
+
+    <script type="module" src="main.js">
+        const listItem = document.querySelectorAll("#menu li");
+
+        [...listItem].forEach(item => {
+            item.addEventListener("click", ()=>{
+                console.log(item);
+            });
+        });
+
+        //modules
+
+
+    </script>
+
+</body>
+</html>
