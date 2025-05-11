@@ -12,7 +12,7 @@ import { fetchApi } from "./helper/fetchApi.js";
 //     })
 
 //Get Product
-fetch("https://dummyjson.com/products")
+fetch("http://localhost:3000/products")
     .then(response => response.json())
     .then(data => {
         console.log(data.products);
