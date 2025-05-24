@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+
+    <script>
+        <!-- json dang oject -->
+        let a = 10;
+
+        let infoUserJSON = `
+        {
+            "fullName": "pham van khang",
+            "age": 18,
+            "email": "khang567.ht@gmail.com"
+        }`;
+
+        console.log(infoUserJSON);
+
+        // chuyen json sang javascript
+        let infoUserJSONtoJS = JSON.parse(infoUserJSON);
+        console.log(infoUserJSONtoJS);
+
+        //chuyen tu JS sang JSON
+        let infoUserJStoJSON = JSON.stringify(infoUserJSONtoJS);
+        console.log(infoUserJStoJSON);
+
+    </script>
+
+
+    <div id="listUser" class="user-list"></div>
+
+    <script>
+        let listUser = `[
+            {
+                "fullName": "nguyen van a",
+                "age": 18,
+                "email": "a@gmail.com"
+            },
+            {
+               "fullName": "nguyen van b",
+                "age": 20,
+                "email": "a@gmail.com" 
+            },
+            {
+                "fullName": "pham van khang",
+                "age": 22,
+                "email": "a@gmail.com"
+            }
+        ]`;
+
+        let listUserJSON = JSON.parse(listUser);
+        let htmls = "";
+        listUserJSON.forEach(item=>{
+            htmls +=
+            `
+            <div class=user-item>
+                <div class=inner-name>${item.fullName}<\div>
+                <div class=inner-age>${item.age}<\div>
+            <\div>
+            `;
+        });
+
+        const divListUser = document.querySelector("#listUser");
+        divListUser.innerHTML = htmls;
+
+    </script>
+</body>
+</html>

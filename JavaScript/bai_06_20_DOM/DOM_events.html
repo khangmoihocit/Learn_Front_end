@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- onload -->
+    <!-- <script>
+        window.onload = function(){
+            const menu = document.getElementById("menu");
+            console.log(menu);
+        };
+    </script>
+
+    <ul id = "menu">
+        <li>Muc 1</li>
+        <li>Muc 2</li>
+        <li>Muc 3</li>
+    </ul> -->
+
+    <!-- onblur -->
+     <style>
+        .focus{
+            background-color: rgb(128, 128, 128);
+        }
+     </style>
+    <!-- <input type="text" id="inputName" placeholder="Nhap ho ten"> -->
+    <script>
+        // const inputName = document.querySelector("#inputName");
+        // //click vao ô input sẽ chuyển sang chữ hoa
+        // inputName.onblur = function(){
+        //     inputName.value = inputName.value.toUpperCase();
+        //     inputName.classList.remove("focus");
+        // };
+
+        // inputName.onfocus = function(){
+        //     inputName.classList.add("focus");
+        // };
+
+        // inputName.onkeydown = function(){
+        //     console.log("onkeydown");
+        //     alert("onkeydown");
+        // };
+
+
+    </script>
+
+
+    <!-- onclick -->
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+        }
+        .menu{
+            background-color: orange;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+
+        .button{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .menu ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            margin-top: 30px;
+        }
+
+        .menu ul li{
+            padding: 10px;
+            border-bottom: 1px solid #0000001e;
+        }
+
+        .menu .inner-close{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .menu.show{
+            display: block;
+        }
+
+    </style>
+
+     <div class="menu" id="menu">
+        <button class="inner-close" id="buttonClose">Close</button>
+        <ul>
+            <li>Muc 1</li>
+            <li>Muc 2</li>
+            <li>Muc 3</li>
+        </ul>
+     </div>
+     <button class="button" id="buttonMenu">Menu</button>
+
+    <script>
+        const buttonMenu = document.querySelector("#buttonMenu");
+        const buttonClose = document.querySelector("#buttonClose");
+        const menu = document.querySelector("#menu");
+
+        buttonMenu.onclick = function(){
+            menu.classList.add("show");
+        };
+
+        buttonClose.onclick = function(){
+            menu.classList.remove("show");
+        };
+    </script>
+    
+</body>
+</html>
