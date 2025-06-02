@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .section-one,
+    .section-two {
+        text-align: center;
+    }
+
+    .section-two table,
+    tr,
+    th {
+        border: 1px solid #423737;
+        ;
+    }
+
+    .section-two .inner-table {
+        display: flex;
+        justify-content: center;
+    }
+
+    tr,
+    th {
+        padding: 7px;
+    }
+</style>
+
+<body>
+    <!-- section-one -->
+    <div class="section-one">
+        <h1><ins>Danh sách khóa học trực tuyến</ins></h1>
+        <img src="images/daotaonoibo.jpg" alt="ảnh">
+        <p><i>Khám phá các khóa học mới nhất để nâng cao kĩ năng của bạn!</i></p>
+    </div>
+    <!-- End section-one -->
+    <hr />
+
+
+    <!-- section-two -->
+    <div class="section-two">
+        <h2>Bảng danh sách khóa học</h2>
+        <div class="inner-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">STT</th>
+                        <th rowspan="2">Tên khóa học</th>
+                        <th colspan="2">Thông tin giảng dạy</th>
+                        <th rowspan="2">Thông tin</th>
+                        <th rowspan="2">Tác vụ</th>
+                    </tr>
+                    <tr>
+                        <th>Giảng viên</th>
+                        <th>Thời lượng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>1</th>
+                        <th>Lập trình web</th>
+                        <th>Nguyễn văn A</th>
+                        <th rowspan="3">8 tuần</th>
+                        <th><a href="">Chi tiết</a></th>
+                        <th><a href="">Đăng ký</a></th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th>Phân tích dữ liệu</th>
+                        <th>Trần Thị B</th>
+                        <th><a href="#">Chi tiết</a></th>
+                        <th><a href="">Đăng ký</a></th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th>Thiết kế đồ họa</th>
+                        <th>Phạm Văn C</th>
+                        <th><a href="#">Chi tiết</a></th>
+                        <th><a href="">Đăng ký</a></th>
+                    </tr>
+                    <tr>
+                        <th colspan="6"><i>Liên hệ để biết thêm thông tin về các khóa học đặc biệt</i></th>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- End section-two -->
+    <hr />
+
+    <!--section-three -->
+    <style>
+        .section-three .box-1 .container {
+            display: flex;
+        }
+
+        .section-three .box-1 .container .inner-img {
+            margin-top: 70px;
+        }
+
+        .section-three .box-1 .container .inner-main .inner-title {
+            list-style-type: disclosure-open;
+            margin-left: -30px;
+        }
+
+        .section-three .box-2 .inner-title {
+            list-style-type: disclosure-closed;
+        }
+
+        .section-three .box-2 .container {
+            display: flex;
+            align-items: center;
+        }
+    </style>
+
+    <div class="section-three">
+        <h2 style="text-align: center;"><ins>Nội dung chi tiết khóa học</ins></h2>
+
+        <div class="box-1">
+            <div class="container">
+                <div class="inner-img">
+                    <img src="images/daotaonoibo.jpg" alt="ảnh" width="200px">
+                </div>
+                <div class="inner-main">
+                    <ul class="inner-title">
+                        <li><ins><b>Lập trình Web</b></ins></li>
+                    </ul>
+                    <div class="inner-des">
+                        <p><b>Lập trình web</b> cung cấp các kỹ năng cơ bản và nâng cao để phát triển ứng dụng web hiện
+                            đại.
+                            Khóa học bao gồm:</p>
+                        <ol>
+                            <li><ins>Học HTML, CSS, JavaScript: </ins> Xây dựng giao diện trang web thân thiện và tối
+                                ưu.
+                            </li>
+                            <li><i>Phát triển giao diện người dùng: </i>Sử dụng framework như Bootstrap để tạo giao diện
+                                responsive</li>
+                            <li><b>Tạo ứng dụng web động: </b>Làm việc với PHP, Node.js, hoặc các cộng nghệ backend
+                                khác.
+                            </li>
+                            <li>Tích hợp cơ sở dữ liệu:
+                                <ul>
+                                    <li>MySQL</li>
+                                    <li>PostgreSQL</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="box-2">
+            <div class="container">
+                <div class="inner-img">
+                    <img src="images/daotaonoibo.jpg" alt="ảnh" width="200px">
+                </div>
+                <ul class="inner-title">
+                    <li><ins><b>Lập trình Web</b></ins></li>
+                </ul>
+            </div>
+        </div>
+        <hr />
+        <div class="box-2">
+            <div class="container">
+                <div class="inner-img">
+                    <img src="images/daotaonoibo.jpg" alt="ảnh" width="200px">
+                </div>
+                <ul class="inner-title">
+                    <li><ins><b>Thiết kế đồ họa</b></ins></li>
+                </ul>
+            </div>
+        </div>
+        <hr />
+
+    </div>
+    <!-- End section-three -->
+
+</body>
+
+</html>
