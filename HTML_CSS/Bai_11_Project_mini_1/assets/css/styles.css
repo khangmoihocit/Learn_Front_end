@@ -1,0 +1,125 @@
+/* Header */
+.header{
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-1);
+    padding: 0 40px;
+}
+
+.header .inner-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .inner-logo a{
+    display: flex;
+    align-items: center;
+}
+
+.header .inner-logo img{
+    height: 40px;
+    width: auto;
+}
+
+.header .inner-logo span{
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--color-text);
+    margin-left: 10px;
+}
+
+.header .inner-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header .inner-menu ul li a{
+    display: inline-block;
+    padding: 35px 20px;
+    color: var(--color-text);
+    font-size: 18px;
+}
+
+.header .inner-menu ul li a:hover{
+    background: #fff;
+}
+
+.header .inner-social ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header .inner-social ul li{
+    margin-left: 10px;
+}
+
+.header .inner-social ul li a{
+    display: inline-block;
+    text-align: center;
+    /* căn giữa */
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 20px;
+    color: var(--color-text);
+}
+/*End Header */
+
+/* Section One */
+.section-one {
+    background-image: url(../images/background1.jpg);
+    padding: 150px 0;
+    /* lớp con dùng absolute thì lớp cha phải có relative */
+    position: relative; 
+}
+
+.section-one::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.section-one .inner-wrap{
+    /* sẽ có z-index = 0 và ở dưới before nên sẽ hiện lên trước before */
+    position: relative;
+}
+
+.section-one .inner-wrap .inner-sub-title{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.section-one .inner-wrap .inner-title{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.section-one .inner-wrap .inner-desc{
+    color: #fff;
+}
+
+/* button */
+.button{
+    color: var(--color-text);
+    background: #fff;
+    border: 2px solid #fff;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 5px;
+}
+/* end button */
+/* End Section One */
