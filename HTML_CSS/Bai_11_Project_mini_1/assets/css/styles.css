@@ -74,16 +74,20 @@
 /* Section One */
 .section-one {
     background-image: url(../images/background1.jpg);
+
     padding: 100px 150px 280px 150px;
+
     /* lớp con dùng absolute thì lớp cha phải có relative */
     position: relative; 
 }
+
 
 .section-one .button{
     margin-right: 10px;
 }
 
 /* lớp phủ đen */
+
 .section-one::before{
     content: "";
     position: absolute;
@@ -114,7 +118,9 @@
 }
 
 .section-one .inner-wrap .inner-desc{
+
     color: #afadad;
+
 }
 
 /* button */
@@ -126,6 +132,7 @@
     display: inline-block;
     border-radius: 5px;
 }
+
 
 .button-two {
     background-color: var(--color-two);
@@ -207,3 +214,4 @@
     align-items: center;
 }
 /* End Section Two */
+
