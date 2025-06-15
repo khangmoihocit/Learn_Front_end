@@ -60,7 +60,7 @@
 
 
                 <div class="inner-buttons">
-                    <button class="btn btn-reset" id="buttonReset">Nhập lại</button>
+                    <button class="btn btn-reset" type="button" id="buttonClear">Nhập lại</button>
                     <button type="submit" class="btn btn-submit" id="buttonSubmit">Đăng ký</button>
                 </div>
 
@@ -80,9 +80,9 @@
                         <th class="text-center">Tác vụ</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td cla ss="text-center">1</td>
+                <tbody id="table-content">
+                    <!-- <tr>
+                        <td class="text-center">1</td>
                         <td>Lập trình web</td>
                         <td>Nguyễn Văn A</td>
                         <td><a href="#">Hủy đăng ký</a></td>
@@ -104,7 +104,7 @@
                         <td>Cơ sở dữ liệu</td>
                         <td>Nguyễn Văn A</td>
                         <td><a href="#">Hủy đăng ký</a></td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
@@ -116,9 +116,8 @@
 <script>
     var arr = [
         {
-            stt: 0,
+            id: 0,
             course: "",
-            nameTeacher: ""
         }
     ];
 
@@ -130,11 +129,10 @@
     const femaleGender = document.getElementById("female");
     const selectCourse = document.getElementById("course");
 
-    const formRegister = document.getElementById("formRegister")
+    const formRegister = document.getElementById("formRegister"); //form
+    const buttonClear = document.getElementById("buttonClear"); //button nhập lại
 
-    formRegister.onsubmit = function (e) {
-        e.preventDefault();
-
+    const isValidInput = () => { //check input
         [...document.getElementsByClassName("messageError")].forEach(item => item.remove());
 
         let isValid = true;
@@ -168,20 +166,63 @@
             selectCourse.insertAdjacentHTML("afterend", "<div class='messageError'>Khóa học không được rỗng</div>");
             isValid = false;
         }
+        return isValid;
+    }
 
+
+    formRegister.onsubmit = function (e) { //đăng ký
+        e.preventDefault();
+
+        const isValid = isValidInput();
         if (isValid == true) {
             let obj = {
-                stt: arr[arr.length - 1].stt + 1,
+                id: arr[arr.length - 1].id + 1,
                 course: selectCourse.value,
                 nameTeacher: inputFullName.value
             };
 
             arr.push(obj);
-            console.log(obj);
+            loadListRegister();
             console.log(arr);
+        }//if
+    };//onSubmit
 
-            const listRegister = document.getElementById
-        }
+
+    const loadListRegister = () => { //load danh sách
+        const listRegister = document.getElementById("table-content");
+        listRegister.innerHTML = "";
+        let i = 1;
+        arr.map(item => {
+            if (item.id !== 0) {
+                listRegister.innerHTML += `<tr id=${item.id}>
+                                                <td class="text-center">${i++}</td>
+                                                <td>${item.course}</td>
+                                                <td>nguyen van a</td>
+                                                <td><a href="#" onclick="cancelRegister(${item.id})">Hủy đăng ký</a></td>
+                                            </tr>`;
+            } //if
+        }) //end map
+    }// load
+
+
+    buttonClear.onclick = () => { //nhập lại
+        inputFullName.value = "";
+        inputEmail.value = "";
+        inputPhoneNumber.value = "";
+        inputDateOfBirth.value = "";
+        maleGender.checked = false;
+        femaleGender.checked = false;
+        selectCourse.value = "";
+    }
+
+
+    const cancelRegister = (id) => { //hủy đăng ký
+        arr.forEach((item, index) => {
+            if (item.id === id) {
+                arr.splice(index, 1);
+            }
+        });
+        loadListRegister();
     };
 
 
