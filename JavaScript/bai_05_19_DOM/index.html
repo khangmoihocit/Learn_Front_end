@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <style>
-        .light{
+        .light {
             background-color: white;
         }
 
-        .drak{
+        .drak {
             background-color: darkblue;
             color: white;
         }
-        
-        .test-2{
+
+        .test-2 {
             background-color: orange;
         }
 
-        .test-3{
+        .test-3 {
             background-color: yellow;
         }
     </style>
 
-    <div class="light", id="box"> Nội dung thẻ 1</div>
+    <div class="light" , id="box"> Nội dung thẻ 1</div>
 
     <ul id="menu">
         <li>Nội dung thẻ 2</li>
@@ -49,11 +51,16 @@
             item.classList.add("test-2");
             item.classList.remove("test");
         });;
-        
+
         var s = document.querySelector("#box").innerHTML;
         console.log(s);
 
-
+        // Các vị trí hợp lệ:
+        // element.insertAdjacentHTML("beforebegin", "<div>Trước element</div>");
+        // element.insertAdjacentHTML("afterbegin", "<div>Đầu trong element</div>");
+        // element.insertAdjacentHTML("beforeend", "<div>Cuối trong element</div>");
+        // element.insertAdjacentHTML("afterend", "<div>Sau element</div>");
     </script>
 </body>
+
 </html>

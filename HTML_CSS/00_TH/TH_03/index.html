@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- Section One -->
+        <div class="section-one">
+            <h2>BIỂU MẪU ĐĂNG KÝ</h2>
+            <form action="" id="formRegister">
+                <div class="inner-group">
+                    <label for="fullName">Họ và tên</label>
+                    <input type="text" placeholder="Enter full name" name="fullName" id="fullName">
+
+                </div>
+
+                <div class="inner-group">
+                    <label for="email">Email</label>
+                    <input type="text" placeholder="Enter email address" name="email" id="email">
+                </div>
+
+
+                <div class="inner-form">
+                    <div class="inner-group">
+                        <label for="phoneNumber">Số điện thoại</label>
+                        <input type="text" placeholder="Enter phone number" name="phoneNumber" id="phoneNumber">
+                    </div>
+                    <div class="inner-group">
+                        <label for="dateOfBirth">Ngày sinh</label>
+                        <input type="date" placeholder="dd/mm/yyyy" name="dateOfBirth" id="dateOfBirth">
+                    </div>
+                </div>
+
+                <div class="inner-group">
+                    <label>Giới tính</label>
+                    <div class="inner-radio">
+                        <input type="radio" value="nam" name="gender" id="male"> <label for="male">nam</label>
+                        <input type="radio" value="nữ" name="gender" id="female"> <label for="female">nữ</label>
+                    </div>
+                </div>
+
+                <div class="inner-group">
+                    <label for="course">Chọn khóa học</label>
+                    <select name="course" id="course">
+                        <option value="">[CHỌN KHÓA HỌC]</option>
+                        <option value="lập trình web">lập trình web</option>
+                        <option value="lập trình hướng sự kiện">lập trình hướng sự kiện</option>
+                        <option value="lập trình hướng đối tượng">lập trình hướng đối tượng</option>
+                        <option value="lập trình cơ bản">lập trình cơ bản</option>
+                        <option value="lập trình thiết bị di động">lập trình thiết bị di động</option>
+                    </select>
+                </div>
+
+
+                <div class="inner-buttons">
+                    <button class="btn btn-reset" id="buttonReset">Nhập lại</button>
+                    <button type="submit" class="btn btn-submit" id="buttonSubmit">Đăng ký</button>
+                </div>
+
+            </form>
+        </div>
+        <!-- End Section One -->
+
+        <!-- Section Two -->
+        <div class="section-two">
+            <h2>ĐÃ ĐĂNG KÝ</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="text-center">STT</th>
+                        <th class="text-center">Môn học</th>
+                        <th class="text-center">Giảng viên</th>
+                        <th class="text-center">Tác vụ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td cla ss="text-center">1</td>
+                        <td>Lập trình web</td>
+                        <td>Nguyễn Văn A</td>
+                        <td><a href="#">Hủy đăng ký</a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">2</td>
+                        <td>Lập trình di động</td>
+                        <td>Nguyễn Văn A</td>
+                        <td><a href="#">Hủy đăng ký</a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">3</td>
+                        <td>Thiết kế web</td>
+                        <td>Nguyễn Văn A</td>
+                        <td><a href="#">Hủy đăng ký</a></td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">4</td>
+                        <td>Cơ sở dữ liệu</td>
+                        <td>Nguyễn Văn A</td>
+                        <td><a href="#">Hủy đăng ký</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- End Section Two -->
+
+    </div>
+</body>
+
+<script>
+    var arr = [
+        {
+            stt: 0,
+            course: "",
+            nameTeacher: ""
+        }
+    ];
+
+    const inputFullName = document.getElementById("fullName");
+    const inputEmail = document.getElementById("email");
+    const inputPhoneNumber = document.getElementById("phoneNumber");
+    const inputDateOfBirth = document.getElementById("dateOfBirth");
+    const maleGender = document.getElementById("male");
+    const femaleGender = document.getElementById("female");
+    const selectCourse = document.getElementById("course");
+
+    const formRegister = document.getElementById("formRegister")
+
+    formRegister.onsubmit = function (e) {
+        e.preventDefault();
+
+        [...document.getElementsByClassName("messageError")].forEach(item => item.remove());
+
+        let isValid = true;
+
+        if (inputFullName.value.trim() === "") {
+            inputFullName.insertAdjacentHTML("afterend", "<div class='messageError'>Họ và tên không hợp lệ</div>");
+            isValid = false;
+        }
+
+        if (!/[0-9a-zA-Z]{1,}@[0-9a-zA-Z]{0,}.[0-9a-zA-Z]/.test(inputEmail.value)) {
+            inputEmail.insertAdjacentHTML("afterend", "<div class='messageError'>Email không hợp lệ</div>");
+            isValid = false;
+        }
+
+        if (!/^[0-9]{1,10}$/.test(inputPhoneNumber.value)) {
+            inputPhoneNumber.insertAdjacentHTML("afterend", "<div class='messageError'>Số điện thoại không hợp lệ</div>");
+            isValid = false;
+        }
+
+        if (inputDateOfBirth.value.trim() === "") {
+            inputDateOfBirth.insertAdjacentHTML("afterend", "<div class='messageError'>Ngày sinh không hợp lệ</div>");
+            isValid = false;
+        }
+
+        if (!maleGender.checked && !femaleGender.checked) {
+            document.getElementsByClassName("inner-radio")[0].insertAdjacentHTML("afterend", "<div class='messageError'>Giới tính không được trống</div>");
+            isValid = false;
+        }
+
+        if (selectCourse.value.trim() === "") {
+            selectCourse.insertAdjacentHTML("afterend", "<div class='messageError'>Khóa học không được rỗng</div>");
+            isValid = false;
+        }
+
+        if (isValid == true) {
+            let obj = {
+                stt: arr[arr.length - 1].stt + 1,
+                course: selectCourse.value,
+                nameTeacher: inputFullName.value
+            };
+
+            arr.push(obj);
+            console.log(obj);
+            console.log(arr);
+
+            const listRegister = document.getElementById
+        }
+    };
+
+
+</script>
+
+</html>
