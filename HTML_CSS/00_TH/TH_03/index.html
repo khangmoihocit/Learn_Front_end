@@ -18,7 +18,6 @@
                 <div class="inner-group">
                     <label for="fullName">Họ và tên</label>
                     <input type="text" placeholder="Enter full name" name="fullName" id="fullName">
-
                 </div>
 
                 <div class="inner-group">
@@ -193,7 +192,7 @@
         const listRegister = document.getElementById("table-content");
         listRegister.innerHTML = "";
         let i = 1;
-        arr.map(item => {
+        arr.forEach(item => {
             if (item.id !== 0) {
                 listRegister.innerHTML += `<tr id=${item.id}>
                                                 <td class="text-center">${i++}</td>
