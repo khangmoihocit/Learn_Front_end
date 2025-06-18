@@ -142,11 +142,11 @@
         let isValid = true;
 
         if (inputFullName.value.trim() === "") {
-            document.getElementsByClassName("fullName")[0].innerHTML = "Họ và tên không hợp lệ";
+            document.getElementsByClassName("fullName")[0].innerHTML = "bHọ và tên không hợp lệ";
             isValid = false;
         }
 
-        if (!/[0-9a-zA-Z]{1,}@[0-9a-zA-Z]{1,}.[0-9a-zA-Z]/.test(inputEmail.value)) {
+        if (!/^[0-9a-zA-Z]{1,}@[0-9a-zA-Z]{1,}.[0-9a-zA-Z]$/.test(inputEmail.value)) {
             document.getElementsByClassName("email")[0].innerHTML = "Email không hợp lệ";
              isValid= false;
         }
@@ -171,7 +171,7 @@
             isValid = false;
         }
         return isValid;
-    }
+    }  //check input
 
 
     formRegister.onsubmit = function (e) { //đăng ký
